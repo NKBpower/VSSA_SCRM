@@ -1,18 +1,4 @@
-# 数据集级批量验证(创新点一 + 二两阶段精修模型)
-# 用法: bash val_on_dataset.sh
-# 按实际路径修改 IMG_DIR / GT_DIR / OUT_DIR / CKPT
-#
-# 以下路径/参数均支持环境变量覆盖(默认值即上面原始硬编码值,直接 bash 执行与原行为完全一致):
-#   IMG_DIR=... GT_DIR=... OUT_DIR=... CKPT=... \
-#   NUM_CLICKS=11 SPACING="1.5 1.5 1.5" USE_REFINEMENT=1 bash val_on_dataset.sh
-# 对照实验示例:
-#   关闭精修(仅创新点一): USE_REFINEMENT=0 bash val_on_dataset.sh
-#   换 checkpoint:       CKPT=work_dir/peft_refine_b2x1/sam_model_latest.pth bash val_on_dataset.sh
-#   跨中心(tangdu):      IMG_DIR=/huangdong/code_gj/tangdu_dataset_sam3d/imagesVal \
-#                        GT_DIR=/huangdong/code_gj/tangdu_dataset_sam3d/labelsVal \
-#                        OUT_DIR=./pred/tangdu bash val_on_dataset.sh
 
-# ---------------- 配置(可用环境变量覆盖,默认值与原脚本一致) ----------------
 IMG_DIR="${IMG_DIR:-}"
 GT_DIR="${GT_DIR:-}"
 OUT_DIR="${OUT_DIR:-./pred/peft_refine_val}"
