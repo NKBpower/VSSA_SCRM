@@ -13,8 +13,8 @@
 #                        OUT_DIR=./pred/tangdu bash val_on_dataset.sh
 
 # ---------------- 配置(可用环境变量覆盖,默认值与原脚本一致) ----------------
-IMG_DIR="${IMG_DIR:-/huangdong/code_gj/xijing_dataset_sam3d/imagesVal}"
-GT_DIR="${GT_DIR:-/huangdong/code_gj/xijing_dataset_sam3d/labelsVal}"
+IMG_DIR="${IMG_DIR:-}"
+GT_DIR="${GT_DIR:-}"
 OUT_DIR="${OUT_DIR:-./pred/peft_refine_val}"
 CKPT="${CKPT:-work_dir/peft_refine_b2x1/sam_model_dice_best.pth}"
 NUM_CLICKS="${NUM_CLICKS:-11}"
